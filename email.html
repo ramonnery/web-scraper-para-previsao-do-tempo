@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            padding: 20px;
+        }
+        .weather-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .header {
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .current-weather, .forecast {
+            padding: 20px;
+        }
+        .current-weather h2, .forecast h2 {
+            margin-top: 0;
+        }
+        .forecast-item {
+            border-top: 1px solid #ddd;
+            padding: 10px 0;
+        }
+        .forecast-item:first-child {
+            border-top: none;
+        }
+        .temp {
+            font-size: 24px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+    <body>
+        <div class="weather-container">
+            <div class="header">
+                <h1>Previsão do Tempo</h1>
+            </div>
+            <div class="current-weather">
+                <h2>Tempo Atual</h2>
+                <p class="temp">${current_temperature}</p>
+                <p>${current_weather_condition}</p>
+            </div>
+            <div class="forecast">
+                <h2>Previsão para os Próximos 3 Dias</h2>
+                <div class="forecast-item">
+                    <p><strong>Dia 1:</strong> ${temperature_first_day}, ${weather_condition_first_day}</p>
+                </div>
+                <div class="forecast-item">
+                    <p><strong>Dia 2:</strong> ${temperature_second_day}, ${weather_condition_second_day}</p>
+                </div>
+                <div class="forecast-item">
+                    <p><strong>Dia 3:</strong> ${temperature_third_day}, ${weather_condition_third_day}</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
